@@ -7,6 +7,8 @@ import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { HiSearch,HiBell,HiChat } from "react-icons/hi";
 import app from './../Shared/firebaseConfig'
 import { useRouter } from 'next/navigation';
+import logo from '../Image/Logo2.jpg';
+import '../style/estilotpropio.css';
 
 function Header() {
   const { data: session } = useSession();
@@ -41,8 +43,8 @@ function Header() {
   
   return (
     <div className='flex justify-between 
-     gap-3 md:gap-2 items-center p-6 '>
-        <Image src='/logo.png' alt='logo'
+     gap-3 md:gap-2 items-center p-6 home' >
+        <Image src={logo} alt='logo'
         width={60} height={60} onClick={()=>router.push('/')}
         className='hover:bg-gray-300 p-2
         rounded-full cursor-pointer'/>
